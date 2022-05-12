@@ -3,7 +3,7 @@ var obj1 = {
   id: 42,
   counter: function counter() {
     setTimeout(() => {
-      console.log(this.id)
+      console.log('firstOne-', this.id)
     }, 10)
   },
 }
@@ -12,10 +12,10 @@ var obj1 = {
 var obj2 = {
   id: 42,
   counter: function counter() {
-    console.log(this)
+    console.log('before function-', this)
     var that = this
     setTimeout(function () {
-      console.log(that)
+      console.log('after function with that', that.id)
     }, 10)
   },
 }
